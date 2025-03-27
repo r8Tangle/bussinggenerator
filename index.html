@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Fullscreen Mode</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking the CSS file -->
+</head>
+<body>
+    <div id="color-selection">
+        <h2>Select a Color</h2>
+        <button onclick="selectColor('Green')">Green</button>
+        <button onclick="selectColor('Magenta')">Magenta</button>
+        <button onclick="selectColor('Pink')">Pink</button>
+        <button onclick="selectColor('Red')">Red</button>
+        <button onclick="selectColor('Silver')">Silver</button>
+        <button onclick="selectColor('Yellow')">Yellow</button>
+    </div>
+    <img id="top-image" alt="Top Random Image">
+    <div id="container">
+        <div id="time"></div>
+        <div id="date"></div>
+        <img id="random-image" class="random-image" alt="Random Image">
+        <div id="timer">Expires in 00:00:30:00</div>
+        <img src="https://i.postimg.cc/8PZz4LCC/Screenshot-20250220-120225.png" alt="Background Image">
+    </div>
+    <div class="black-bar"></div>
+
+    <script src="script.js"></script> <!-- Linking the JavaScript file -->
+</body>
+</html>
