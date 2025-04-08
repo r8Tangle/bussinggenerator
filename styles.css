@@ -69,7 +69,7 @@ html, body {
     max-height: 100vh;
     object-fit: cover;
     margin-bottom: 15px;
-    cursor: pointer; /* Added to make it look clickable */
+    cursor: pointer;
 }
 
 #timer {
