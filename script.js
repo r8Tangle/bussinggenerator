@@ -4,24 +4,25 @@ const topImages = {
     "Pink": "https://i.postimg.cc/Yqx2zJSw/Pink.png",
     "Red": "https://i.postimg.cc/vZqQpf9q/Red.png",
     "Silver": "https://i.postimg.cc/BvjqsbBq/Silver.png",
-    "Yellow": "https://i.postimg.cc/bw1YvFp6/Yellow.png"
+    "Yellow": "https://i.postimg.cc/bw1YvFp6/Yellow.png",
+    "Blue": "https://i.postimg.cc/ZR8yRhVh/Blue.png" // Added Blue
 };
 
 function selectColor(color) {
     document.getElementById("top-image").src = topImages[color];
     document.getElementById("color-selection").style.display = "none";
     initializePage();
-    enterFullscreen();  // Automatically enter fullscreen when color is selected
+    enterFullscreen();
 }
 
 function enterFullscreen() {
     if (document.documentElement.requestFullscreen) {
         document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+    } else if (document.documentElement.mozRequestFullScreen) {
         document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, Opera
+    } else if (document.documentElement.webkitRequestFullscreen) {
         document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+    } else if (document.documentElement.msRequestFullscreen) {
         document.documentElement.msRequestFullscreen();
     }
 }
@@ -32,12 +33,13 @@ function initializePage() {
     startTimer(30 * 60);
     setRandomImage();
     flashRandomImage();
-    addRandomImageClickListener(); // Add click listener for random image
+    addRandomImageClickListener();
 }
 
 function startTimer(durationInSeconds) {
     let timer = durationInSeconds;
     const timerElement = document.getElementById("timer");
+
     function updateTimerDisplay() {
         let days = Math.floor(timer / 86400);
         let hours = Math.floor((timer % 86400) / 3600);
@@ -45,8 +47,10 @@ function startTimer(durationInSeconds) {
         let seconds = timer % 60;
         timerElement.textContent = `Expires in ${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }
+
     updateTimerDisplay();
-    setInterval(function () {
+
+    setInterval(() => {
         if (timer > 0) {
             timer--;
             updateTimerDisplay();
@@ -61,7 +65,8 @@ function setRandomImage() {
         "https://i.postimg.cc/Y9CtbrgV/Layer-11.png",
         "https://i.postimg.cc/ZqcT8B9p/Layer-12.png",
         "https://i.postimg.cc/KzpxW6DY/Layer-13.png",
-        "https://i.postimg.cc/HnJd1669/Layer-14.png"
+        "https://i.postimg.cc/HnJd1669/Layer-14.png",
+        "https://i.postimg.cc/XvQq33wm/Layer-15.png" // Added Layer-15
     ];
     const randomIndex = Math.floor(Math.random() * images.length);
     document.getElementById("random-image").src = images[randomIndex];
@@ -76,8 +81,8 @@ function flashRandomImage() {
 
 function addRandomImageClickListener() {
     const randomImage = document.getElementById("random-image");
-    randomImage.onclick = function() {
-        setRandomImage(); // Change to a new random image on click
+    randomImage.onclick = () => {
+        setRandomImage();
     };
 }
 
