@@ -5,7 +5,7 @@ const topImages = {
     "Red": "https://i.postimg.cc/vZqQpf9q/Red.png",
     "Silver": "https://i.postimg.cc/BvjqsbBq/Silver.png",
     "Yellow": "https://i.postimg.cc/bw1YvFp6/Yellow.png",
-    "Blue": "https://i.postimg.cc/ZR8yRhVh/Blue.png" // Added Blue
+    "Blue": "https://i.postimg.cc/B6b6nyp6/Blue.png" // Added Blue
 };
 
 function selectColor(color) {
